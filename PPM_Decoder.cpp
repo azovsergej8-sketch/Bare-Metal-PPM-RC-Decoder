@@ -23,7 +23,7 @@ void PPM_Decoder::initialization() const{
 
   //4. Настройка DMA
   DMA->CCR = (1 << EN) | (1 << CIRC) | (1 << MINC) | (1 << PSIZE0) | (1 << MSIZE1);
-  DMA->CPAR = 0x40012C34; //Адрес TIM1_CCR1
+  DMA->CPAR = (uint32_t)&(TIM1->CCR1);
   DMA->CMAR = (uint32_t)&this->raw_timings; //Адорес памяти
   DMA->CNDTR = 16; //Количество передач
 }
