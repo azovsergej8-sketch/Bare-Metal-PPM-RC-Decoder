@@ -1,7 +1,6 @@
-# Bare-Metal STM32 PPM Radio Control Subsystem
+# Bare-Metal-PPM-RC-Decoder
 
-A low-overhead, high-performance flight controller subsystem developed in **Pure C++** for the STM32 microcontroller. The project implements a non-blocking 8-channel PPM (Pulse Position Modulation) decoder with digital filtering, signal normalization, and hardware-level safety tracking.
-
+Low-latency PPM signal decoder and channel processor for STM32C0 microcontrollers. Developed in C++ with direct register access — no HAL, no middleware. Designed for RC receiver applications
 ## 🚀 Key Technical Features
 
 ### 1. Hardware-Level Signal Capture
