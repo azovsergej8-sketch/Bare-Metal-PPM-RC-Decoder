@@ -23,7 +23,7 @@ void ChannelMapper::transform(uint32_t* buf_in, float* buf_out){
      if(deviation > 0) half_range = max_pwm[i] - center_pwm[i];
      else half_range = center_pwm[i] - min_pwm[i];
      if(half_range > 0){
-      buf_out = deviation / (float)half_range;
+      buf_out[i] = deviation / (float)half_range;
       if (buf_out[i] > 1.0f)  buf_out[i] = 1.0f;
       if (buf_out[i] < -1.0f) buf_out[i] = -1.0f;
      }
